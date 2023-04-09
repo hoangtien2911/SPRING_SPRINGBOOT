@@ -1,0 +1,14 @@
+package com.hoangtien.springboot.myfirstwebapp.login;
+
+import org.springframework.stereotype.Controller;
+import org.springframework.web.bind.annotation.RequestMapping;
+
+@Controller
+public class LoginController {
+//	/login => com.hoangtien.springboot.myfirstwebapp.login.LoginController => login.jsp
+	@RequestMapping("say-hello-jsp")
+	public String sayHelloJsp() {
+		return "sayHello";
+	}
+
+}

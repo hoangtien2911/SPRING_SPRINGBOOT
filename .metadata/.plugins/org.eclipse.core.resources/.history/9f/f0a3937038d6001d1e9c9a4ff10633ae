@@ -1,0 +1,7 @@
+##JSP
+/src/main/resources/META-INF/resources/WEB-INF/jsp/sayHello.jsp	
+/say-hello-jsp => SayHelloController - sayHelloJsp method => sayHello
+
+=>  spring.mvc.view.prefix=/WEB-INF/jsp/
+	spring.mvc.view.suffix=.jsp
+=> /WEB-INF/jsp/sayHello.jsp

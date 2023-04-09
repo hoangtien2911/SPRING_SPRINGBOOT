@@ -1,0 +1,61 @@
+##JSP
+/src/main/resources/META-INF/resources/WEB-INF/jsp/sayHello.jsp	
+/say-hello-jsp => SayHelloController - sayHelloJsp method => sayHello
+
+<dependency>
+			<groupId>org.apache.tomcat.embed</groupId>
+			<artifactId>tomcat-embed-jasper</artifactId>
+			<scope>provided</scope>
+</dependency>
+
+=>  spring.mvc.view.prefix=/WEB-INF/jsp/
+	spring.mvc.view.suffix=.jsp
+	prefix and suffix will be added to your view name form method you return
+=> /WEB-INF/jsp/sayHello.jsp
+
+##Login JSP
+/login => com.hoangtien.springboot.myfirstwebapp.login.LoginController => login.jsp
+
+//you would want anything to be available to your JSP, you can add it to the model
+//Model call ModelMap
+
+//logger
+private Logger  logger = LoggerFactory.getLogger(getClass());
+logger.debug("Request param is {}", name);
+logger.info("Printed at info level {}", name);
+
+##localhost:8080/login
+B1: Identifies correct Controller method
+/login => LoginController.gotoLoginPage
+B2: Executes Controller method
+=> Puts data into model
+=>Returns view name => Login
+B3: Identifies correct View
+/WEB-INF/jsp/login.jsp
+B4: Execute view
+
+
+## To do
+id 
+username
+description
+targetDate
+done
+
+Todo
+TodoService
+TodoController
+listTodos.jsp
+
+## Request Model Session
+
+
+
+
+
+
+
+
+
+
+

@@ -1,0 +1,5 @@
+package com.hoangtien.springboot.myfirstwebapp.login;
+
+public class AuthenticationService {
+
+}

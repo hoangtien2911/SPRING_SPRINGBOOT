@@ -1,0 +1,34 @@
+package com.in28minutes.springboot.learnjpaandhibernate.course.jpa;
+
+import org.springframework.stereotype.Repository;
+
+import com.in28minutes.springboot.learnjpaandhibernate.course.Course;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+import jakarta.transaction.Transactional;
+
+@Repository
+@Transactional
+public class CourseJpaRepository {
+	
+	// @Autowired
+	//Better recommendation for annotation is @PersistenceContext
+	@PersistenceContext
+	private EntityManager entityManager;
+	public void insert(Course course) {
+		System.out.println("hu1");
+		entityManager.merge(course);
+	}
+	
+	public void deleteById(long id) {
+		System.out.println("hu2");
+		Course course = entityManager.find(Course.class, id);
+		entityManager.remove(course);
+	}
+	
+	public Course findById(long id) {
+		System.out.println("hu3");
+		return entityManager.find(Course.class, id);
+	}
+}

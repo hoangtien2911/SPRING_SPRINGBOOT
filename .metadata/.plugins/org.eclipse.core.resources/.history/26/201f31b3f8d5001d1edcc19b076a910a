@@ -1,0 +1,20 @@
+package com.in28minutes.springboot.learnjpaandhibernate.course.jpa;
+
+import org.springframework.stereotype.Repository;
+
+import com.in28minutes.springboot.learnjpaandhibernate.course.Course;
+
+import jakarta.persistence.EntityManager;
+import jakarta.persistence.PersistenceContext;
+
+@Repository
+public class CourseJpaRepository {
+	
+	// @Autowired
+	//Better recommendation for annotation is @PersistenceContext
+	@PersistenceContext
+	private EntityManager entityManager;
+	public void insert(Course course) {
+		entityManager.merge(course);
+	}
+}

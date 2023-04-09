@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<section name="Workbench">
+	<section name="MavenProjectImportWizardPage">
+		<list key="rootDirectory">
+			<item value="D:\SPRING_SPRINGBOOT\07_Build_Java_Web_Application_with_Spring_Framework\myfirstwebapp"/>
+			<item value="D:\SPRING_SPRINGBOOT\06_Getting_Started_with_JPA_and_Hibernate\learn-jpa-and-hibernate"/>
+			<item value="D:\SPRING_SPRINGBOOT\05_Getting_Started_with_Spring_Boot\learn-spring-boot"/>
+			<item value="D:\SPRING_SPRINGBOOT\02_Getting_Started_with_Java_Spring_Framework\learn-spring-framework"/>
+			<item value="D:\SPRING_SPRINGBOOT\02_Getting_Started_with_Java_Spring_Framework\learn-spring-framework-01"/>
+			<item value="D:\SPRING_SPRINGBOOT\03_Using_Spring_Framework_to_Create_and_Manage_Your_Java_Objects\learn-spring-framework"/>
+			<item value="D:\SPRING_SPRINGBOOT\03 Using Spring Framework to Create and Manage Your Java Objects\learn-spring-framework"/>
+			<item value="D:\SPRING_SPRINGBOOT\huhuhu\learn-spring-framework"/>
+		</list>
+		<list key="projectNameTemplate">
+			<item value="[artifactId]"/>
+			<item value="[artifactId]-TRUNK"/>
+			<item value="[artifactId]-[version]"/>
+			<item value="[groupId].[artifactId]"/>
+			<item value="[groupId].[artifactId]-[version]"/>
+			<item value="[name]"/>
+		</list>
+	</section>
+	<section name="org.eclipse.m2e.core.pom.overview">
+	</section>
+	<section name="org.eclipse.m2e.core.pom.dependencies">
+	</section>
+</section>

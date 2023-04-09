@@ -1,0 +1,7 @@
+logging.level.org.springframework=debug
+spring.profiles.active=dev
+
+
+currency-service.url=
+currency-service.username=
+currency-service.key=

@@ -1,0 +1,11 @@
+package com.hoangtien.springboot.myfirstwebapp.hello;
+
+import org.springframework.web.bind.annotation.RequestMapping;
+
+public class SayHelloController {
+	//"say-hello" => "Hello! What are you learning today?"
+	@RequestMapping("say-hello")
+	public String sayHello() {
+		return "Hello! What are you learning today?";
+	}
+}

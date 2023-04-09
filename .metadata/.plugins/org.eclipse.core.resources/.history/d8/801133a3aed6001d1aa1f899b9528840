@@ -1,0 +1,12 @@
+<html>
+	<head>
+		<title> List Todos Page</title>
+	</head>
+	<body>
+		<div>
+			Welcome to hoangtien			
+		</div>
+		<div>Your Todo are: ${todos}</div>		
+		
+	</body>
+</html>

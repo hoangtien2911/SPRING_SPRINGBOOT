@@ -1,1 +1,12 @@
 1681026925168	Copy file
+1681201502612	Delete element
+1681201526364	Copy file
+1681201533877	Copy file
+1681203040728	Rename type 'LoginController'
+1681209151188	Extract method 'getLoggedInUsername'
+1681209551004	Extract local variable 'username'
+1681209573664	Extract local variable 'password'
+1681209616430	Extract method 'createNewUser'
+1681209656417	Inline local variable 'username'
+1681209665555	Inline local variable 'password'
+1681221552454	Copy compilation unit

@@ -1,5 +1,0 @@
-package com.hoangtien.springboot.myfirstwebapp.todo;
-
-public class TodoController {
-
-}

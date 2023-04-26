@@ -1,2 +1,0 @@
-INSERT INTO COURSE VALUES (1, 'Learn AWS', 'in28minutes');
-SELECT * FROM COURSE

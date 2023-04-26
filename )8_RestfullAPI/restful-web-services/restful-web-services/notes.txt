@@ -1,0 +1,147 @@
+https://github.com/in28minutes/master-spring-and-spring-boot/blob/main/12-rest-api/01-step-by-step-changes/v2.md#step-12	
+	
+	//Path parameters 
+	// /users/{id}/todos/{id} => /users/2/todos/100
+	
+	//hello-world/path-variable/{name}
+	//hello-world/path-variable/Ranga
+	@GetMapping(path = "/hello-world/path-variable/{name}")
+	public HelloWorldBean helloWorldPathVariable(@PathVariable String name) {
+		return new HelloWorldBean(String.format("Hello World, %s", name));
+	}
+	
+	### Return LOCATION AND STATUS AFTER CREATED
+	//POST /users
+	@PostMapping("/users")
+	public ResponseEntity<User> createUser(@RequestBody User user) {
+		User saveUser = service.save(user);
+		//users/4 => /users/{id}, user.getID
+		URI location = ServletUriComponentsBuilder.fromCurrentRequestUri()
+					   .path("/{id}")
+					   .buildAndExpand(saveUser.getId())
+					   .toUri(); 
+		//return status and location in Headers
+		return ResponseEntity.created(location ).build();
+	}
+	
+	### khi m voo trang user/5 ma id 5 ko ton tai thi tra ve trang 404
+	- find user -> null
+	public User findOne(int id) {
+		Predicate<? super User> predicate = user -> user.getId() == id;
+		return users.stream().filter(predicate).findFirst().orElse(null);
+	}
+	- if null -> throw Exception -> 404
+	
+	// GET/ Users
+	@GetMapping("/users/{id}")
+	public User retrieveUser(@PathVariable int id) {
+		User user = service.findOne(id);
+		if (user == null) 
+			throw new UserNotFoundException("id:"+id);
+		return user;
+	}
+	
+	##########
+	SPRING BOOT DEVTOOLS IS DISABLED WHEN YOU RUN A JAVA JAR FILE IN POM.XML
+	
+	
+	#### VALIDATION
+<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-validation</artifactId>
+</dependency>
+	
+// POST /users
+	@PostMapping("/users")
+	public ResponseEntity<User> createUser(@Valid @RequestBody User user) {
+		User saveUser = service.save(user);
+		// users/4 => /users/{id}, user.getID
+		URI location = ServletUriComponentsBuilder.fromCurrentRequestUri().path("/{id}")
+				.buildAndExpand(saveUser.getId()).toUri();
+		// return status and location in Headers
+		return ResponseEntity.created(location).build();
+	}
+	
+	
+//Rest API documentation 
+<dependency>
+	<groupId>org.springdoc</groupId>
+	<artifactId>springdoc-openapi-starter-webmvc-ui</artifactId>
+	<version>2.0.0</version>
+</dependency>
+
+http://localhost:8080/swagger-ui.html
+
+## Content Negotiation(Format in JSON to XML 023 step 18)
+		<dependency>
+			<groupId>com.fasterxml.jackson.dataformat</groupId>
+			<artifactId>jackson-dataformat-xml</artifactId>
+		</dependency>	
+	
+	POST MAN Headers Key: Accept, Value: application/xml
+	
+## Change language 24-19 folder 8
+	
+	POST MAN Headers Key: Accept Language, Value: nl
+	
+	
+##Customizing REST API Responses - Filtering
+com.in28minutes.rest.webservices.restfulwebservices.filtering
+
+don't want to show some field to api ex: password
+029 step 23
+
+MappingJacksonValue
+
+@GetMapping("/filtering-list") //field2, field3
+	public MappingJacksonValue filteringList() {
+		List<SomeBean> list = Arrays.asList(new SomeBean("value1","value2", "value3"),
+				new SomeBean("value4","value5", "value6"));
+		MappingJacksonValue mappingJacksonValue = new MappingJacksonValue(list);
+		
+		SimpleBeanPropertyFilter filter = 
+				SimpleBeanPropertyFilter.filterOutAllExcept("field2","field3");
+		
+		FilterProvider filters = 
+				new SimpleFilterProvider().addFilter("SomeBeanFilter", filter );
+		
+		mappingJacksonValue.setFilters(filters );
+		
+		
+		return mappingJacksonValue;
+	}	
+	
+	
+########## Spring security
+		<dependency>
+			<groupId>org.springframework.boot</groupId>
+			<artifactId>spring-boot-starter-security</artifactId>
+		</dependency>
+		
+Filter Chains
+1) All request should be authenticated
+2)If a request is not authenticated, a web page is shown
+3) CSRF -> POST,PUT 
+
+Configuration 
+
+Bean filterChain
+	
+@Configuration
+public class SpringSecurityConfiguration {
+	@Bean
+	public SecurityFilterChain filterChain(HttpSecurity http) throws Exception {
+//  1) All request should be authenticated
+		http.authorizeHttpRequests(
+				auth -> auth.anyRequest().authenticated()
+				);
+//	2)If a request is not authenticated, a web page is shown
+		http.httpBasic(Customizer.withDefaults());
+//	3) CSRF -> POST,PUT 
+		http.csrf().disable();
+		
+		
+		return http.build();
+	}
+}
+	

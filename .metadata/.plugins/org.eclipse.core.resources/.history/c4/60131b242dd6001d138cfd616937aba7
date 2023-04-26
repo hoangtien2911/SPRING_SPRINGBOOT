@@ -1,5 +1,0 @@
-package com.hoangtien.springboot.myfirstwebapp.hello;
-
-public class SayHelloController {
-
-}

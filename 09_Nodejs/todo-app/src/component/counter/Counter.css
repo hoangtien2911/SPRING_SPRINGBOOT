@@ -1,0 +1,16 @@
+/* const buttonStyle = {
+    fontSize:"40px",
+    backgroundColor: "#00a5ab",
+    width:"100px"
+}; */
+
+.countButton {
+    font-size:40px;
+    background-color: #00a5ab;
+    width:100px;
+}
+
+.count {
+    font-size: 140px;
+    padding: 20px;
+}

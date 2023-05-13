@@ -3,8 +3,12 @@ package com.in28minutes.springboot.learnjpaandhibernate.course;
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.Id;
+import jakarta.persistence.NamedQuery;
 
 @Entity
+
+//class CourseJpaRepository
+//@NamedQuery(name = "find_all_Course", query = "select * from Course")
 public class Course {
 	@Id
 	private long id;	

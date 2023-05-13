@@ -1,0 +1,5 @@
+SQL table
+
+JPQL Entities
+Java Persistent Query Language
+convert to SQL by the JPA implement that is hibernate (@Entity)

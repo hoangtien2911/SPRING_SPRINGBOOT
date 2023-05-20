@@ -22,7 +22,7 @@ import jakarta.transaction.Transactional;
 public class EmployeeRepository {
 	private Logger logger = LoggerFactory.getLogger(this.getClass());
 	@Autowired
-	EntityManager em; //it's is an interface something call a persistent context
+	EntityManager em; //it's an interface something call a persistent context
 	
 	public void insert(Employee employee) {
 		em.persist(employee);

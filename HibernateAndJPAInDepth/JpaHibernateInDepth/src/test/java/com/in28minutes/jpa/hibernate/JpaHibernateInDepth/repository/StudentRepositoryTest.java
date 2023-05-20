@@ -54,7 +54,7 @@ class StudentRepositoryTest {
 	} //end transaction
 
 	@Test
-	@Transactional 
+	@Transactional
 	// @Transactional, this session is delayed session only killed at and of the
 	// test(Hibernate session)
 	// Lazy fetching is you get the details only when they are needed

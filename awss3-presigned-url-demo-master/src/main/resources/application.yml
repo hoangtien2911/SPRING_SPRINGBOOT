@@ -1,0 +1,10 @@
+server:
+  port: 8080
+
+#AWS credentials
+aws:
+  accessKey: AKIAS4RJWBS4Y47APSNE
+  secretKey: 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
+  region: ap-southeast-1
+  s3:
+    bucket: bird-trading-platform

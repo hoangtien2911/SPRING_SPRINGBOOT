@@ -39,6 +39,7 @@ public class ApplicationConfig {
     //19 The authentication manager as the name indicates is the one responsible to manage the authentication.
     // Authentication manager has a bunch of methods and one of them the reason method that help us to authenticate
     //user based on using just the username and password
+    // use in -> AuthenticationService
     @Bean
     public AuthenticationManager authenticationManager(AuthenticationConfiguration config) throws Exception {
         return config.getAuthenticationManager();

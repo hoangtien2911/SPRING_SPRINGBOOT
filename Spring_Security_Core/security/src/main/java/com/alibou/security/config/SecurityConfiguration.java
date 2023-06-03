@@ -28,7 +28,7 @@ public class SecurityConfiguration {
                 .authenticationProvider(authenticationProvider)
                 .addFilterBefore(jwtAuthFilter, UsernamePasswordAuthenticationFilter.class); // execute this filter before the
                 // filter called username, password authentication filter
-                //JwtAuthenticationFilter we check everything and then we set/update the security context
+                //JwtAuthenticationFilter we check everything, then we set/update the security context
                 //after that we will be calling the username password authentication filter
         return http.build();
     }

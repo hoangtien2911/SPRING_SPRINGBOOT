@@ -57,3 +57,29 @@ app:
       - http://localhost:3000/oauth2/redirect
       - myandroidapp://oauth2/redirect
       - myiosapp://oauth2/redirect
+
+application:
+  security:
+    jwt:
+      secret-key: 645367566B5970337336763979244226452948404D6351665468576D5A713474
+      expiration: 86400000 # a day
+      refresh-token:
+        expiration: 604800000 # 7 days
+
+#app:
+#  auth:
+#    tokenSecret: 645367566B5970337336763979244226452948404D6351665468576D5A713474
+#    tokenExpiration: 864000000
+#    refresh-token:
+#      refreshTokenExpiration: 604800000 # 7 days
+#  cors:
+#    allowedOrigins: http://localhost:3000,http://localhost:8080
+#  oauth2:
+#    # After successfully authenticating with the OAuth2 Provider,
+#    # we'll be generating an auth token for the user and sending the token to the
+#    # redirectUri mentioned by the client in the /oauth2/authorize request.
+#    # We're not using cookies because they won't work well in mobile clients.
+#    authorizedRedirectUris:
+#      - http://localhost:3000/oauth2/redirect
+#      - myandroidapp://oauth2/redirect
+#      - myiosapp://oauth2/redirect

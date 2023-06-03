@@ -2,6 +2,7 @@
 <section name="Workbench">
 	<section name="MavenProjectImportWizardPage">
 		<list key="rootDirectory">
+			<item value="E:\SPRING_SPRINGBOOT\16_Securing_Spring\learn-spring-security"/>
 			<item value="D:\SPRING_SPRINGBOOT\Spring_Security_Core\spring-security-tutorial\spring-security-tutorial\Oauth-authentication-server"/>
 			<item value="D:\SPRING_SPRINGBOOT\Spring_Security_Core\Spring-Email-Client"/>
 			<item value="D:\SPRING_SPRINGBOOT\Spring_Security_Core\spring-security-tutorial\spring-security-tutorial"/>
@@ -16,7 +17,6 @@
 			<item value="D:\SPRING_SPRINGBOOT\05_Getting_Started_with_Spring_Boot\learn-spring-boot"/>
 			<item value="D:\SPRING_SPRINGBOOT\02_Getting_Started_with_Java_Spring_Framework\learn-spring-framework"/>
 			<item value="D:\SPRING_SPRINGBOOT\02_Getting_Started_with_Java_Spring_Framework\learn-spring-framework-01"/>
-			<item value="D:\SPRING_SPRINGBOOT\03_Using_Spring_Framework_to_Create_and_Manage_Your_Java_Objects\learn-spring-framework"/>
 		</list>
 		<list key="projectNameTemplate">
 			<item value="[artifactId]"/>

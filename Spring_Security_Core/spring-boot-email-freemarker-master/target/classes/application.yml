@@ -1,0 +1,15 @@
+spring:
+  mail:
+    properties:
+      mail:
+        smtp:
+          starttls:
+            enable: 'true'
+          auth: 'true'
+    host: smtp.gmail.com
+    username: tienphambmt2911@gmail.com
+    protocol: smtp
+    password: bipfvtgtmsbivrxt
+    test-connection: 'false'
+    port: '587'
+    default-encoding: UTF-8
